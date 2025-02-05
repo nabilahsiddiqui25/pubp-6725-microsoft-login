@@ -1,2 +1,18 @@
-# pubp-6725-microsoft-login
-This is a repository for the Microsoft Login prompt that is designed for a phishing attack for the PUBP 6725 course.
+## MICROSOFT LOGIN PAGE CLONE
+
+This is a clone of the iconic login page for Microsoft (outlook) accounts with its form validation.
+
+> In as much as this script does not process information submitted, please do not submit any personal information!
+
+> I DO NOT OWN the rights to any images used in this page!
+### ✨TECH-STACK
+
+- HTML
+- CSS
+- JavaScript
+  
+### 🔍 PREVIEW
+
+Below is a short clip of what this clone looks like
+
+<img src="assets/preview.gif" alt="preview" />
