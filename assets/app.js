@@ -8,19 +8,52 @@ document.addEventListener('DOMContentLoaded', () => {
     let unameVal = pwdVal = false;
     /////next button
     const nxt = document.getElementById('btn_next');
+    const form = document.getElementById('login_form')
 
     nxt.addEventListener('click', () => {
-        //validate the form
+        // Check if the input passes native HTML validation
+        if (!unameInp.checkValidity()) {
+            unameInp.reportValidity();  // This will trigger the browser's built-in error display
+            return;  // Stop execution if input is invalid
+        }
+    
+        // Validate the form (if you have custom validation logic)
         validate();
+    
+        // Assuming unameVal is defined somewhere in validate() or earlier in the code
         if (unameVal) {
             document.getElementById("section_uname").classList.toggle('d-none');
             document.getElementById('section_pwd').classList.remove('d-none');
             document.querySelectorAll('#user_identity').forEach((e) => {
                 e.innerText = unameInp.value;
-            })
+            });
             view = "pwd";
         }
-    })
+    });
+    
+    
+    //     // Proceed with the rest of the logic if email is valid
+    //     const unameVal = unameInp.value.trim();
+    //     document.getElementById("section_uname").classList.toggle('d-none');
+    //     document.getElementById('section_pwd').classList.remove('d-none');
+    //     document.querySelectorAll('#user_identity').forEach((e) => {
+    //         e.innerText = unameVal;
+    //     });
+    //     view = "pwd";
+    // });
+
+    // nxt.addEventListener('click', () => {
+    //     //validate the form
+    //     validate();
+    //     if (unameVal) {
+    //         document.getElementById("section_uname").classList.toggle('d-none');
+    //         document.getElementById('section_pwd').classList.remove('d-none');
+    //         document.querySelectorAll('#user_identity').forEach((e) => {
+    //             e.innerText = unameInp.value;
+    //         })
+    //         view = "pwd";
+    //     }
+    // })
 
     //////sign in button
 

