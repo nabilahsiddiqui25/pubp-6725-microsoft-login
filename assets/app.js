@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             unameInp.reportValidity();  // This will trigger the browser's built-in error display
             return;  // Stop execution if input is invalid
         }
-    
+        
         // Validate the form (if you have custom validation logic)
         validate();
     
@@ -61,6 +61,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sig.addEventListener('click', () => {
         //validate the form
+        
+        //Checking password validity
+
+        if (!pwdInp.checkValidity()) {
+            pwdInp.reportValidity()
+            return;
+        }
+    
         validate();
         if (pwdVal) {
             document.getElementById("section_pwd").classList.toggle('d-none');
